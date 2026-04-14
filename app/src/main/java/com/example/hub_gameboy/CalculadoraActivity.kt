@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatActivity
 
-class CalculadoraActivity : ComponentActivity() {
+class CalculadoraActivity : AppCompatActivity() {
     private lateinit var tvDisplay: TextView
     private lateinit var tvHistorico: TextView
 
@@ -36,6 +36,19 @@ class CalculadoraActivity : ComponentActivity() {
             "×" to R.id.btnMultiplicar, "÷" to R.id.btnDividir
         )
 
+        val scientificOps = listOf(
+            "√" to R.id.btnRaiz,
+            "sin" to R.id.btnSin,
+            "cos" to R.id.btnCos,
+            "tan" to R.id.btnTan
+        )
+
+        scientificOps.forEach { (op, id) ->
+            findViewById<Button>(id)?.setOnClickListener {
+                calcularCientifico(op)
+            }
+        }
+
         val bVoltar: Button = findViewById(R.id.btnVoltarMenu)
 
         bVoltar.setOnClickListener {
@@ -63,8 +76,10 @@ class CalculadoraActivity : ComponentActivity() {
         if (currentInput.isNotEmpty()) {
             val value = currentInput.toDoubleOrNull()
             if (value != null) {
-                if (operand == null) operand = value
-                else operand = performOperation(operand!!, value, pendingOp)
+                if (operand == null)
+                    operand = value
+                else
+                    operand = performOperation(operand!!, value, pendingOp)
             }
             currentInput = ""
         }
@@ -97,9 +112,26 @@ class CalculadoraActivity : ComponentActivity() {
                 Toast.makeText(this, "Erro: Divisão por 0", Toast.LENGTH_SHORT).show()
                 a
             } else a / b
+
             else -> b
         }
     }
+
+    private fun calcularCientifico(op: String) {
+        if (currentInput.isNotEmpty()) {
+            val value = currentInput.toDoubleOrNull() ?: return
+            val result = when (op) {
+                "√" -> kotlin.math.sqrt(value)
+                "sin" -> kotlin.math.sin(Math.toRadians(value))
+                "cos" -> kotlin.math.cos(Math.toRadians(value))
+                "tan" -> kotlin.math.tan(Math.toRadians(value))
+                else -> value
+            }
+            currentInput = formatNumber(result)
+            updateDisplay()
+        }
+    }
+
 
     private fun formatNumber(d: Double): String {
         return if (d == d.toLong().toDouble()) d.toLong().toString() else d.toString()
@@ -123,14 +155,14 @@ class CalculadoraActivity : ComponentActivity() {
     private fun updateDisplay() {
         val textToShow = StringBuilder()
 
-
+        // Lógica do Histórico Refatorada
         if (operand != null && pendingOp != null) {
             tvHistorico.text = "${formatNumber(operand!!)} $pendingOp"
-        } else if (operand == null && pendingOp == null && currentInput.isNotEmpty()) {
-        } else {
+        } else if (currentInput.isEmpty()) {
             tvHistorico.text = ""
         }
 
+        // Lógica do Visor Principal
         textToShow.append(currentInput)
         tvDisplay.text = if (textToShow.isEmpty()) "0" else textToShow.toString()
     }

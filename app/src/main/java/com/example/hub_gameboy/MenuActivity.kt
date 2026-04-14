@@ -3,9 +3,11 @@ package com.example.hub_gameboy
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatDelegate
+import android.content.res.Configuration
+import androidx.appcompat.app.AppCompatActivity
 
-class MenuActivity : ComponentActivity() {
+class MenuActivity : AppCompatActivity() {
     private val aplicativos = listOf("Placar", "Calculadora", "Em Breve")
     private var indexAtual = 0
 
@@ -16,8 +18,22 @@ class MenuActivity : ComponentActivity() {
         val btnSetaEsquerda: Button = findViewById(R.id.btn_seta_esquerda)
         val btnSetaDireita: Button = findViewById(R.id.btn_seta_direita)
         val btnIcone: Button = findViewById(R.id.icon_app_menu)
+        val btnTema: Button = findViewById(R.id.btnTema)
 
         atualizarIcone(btnIcone)
+
+        btnTema.setOnClickListener {
+            val isNightTheme = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+            when (isNightTheme) {
+                Configuration.UI_MODE_NIGHT_YES -> {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                }
+
+                Configuration.UI_MODE_NIGHT_NO -> {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                }
+            }
+        }
 
         btnSetaDireita.setOnClickListener {
             indexAtual++
@@ -41,12 +57,13 @@ class MenuActivity : ComponentActivity() {
                     val intent = Intent(this, PlacarActivity::class.java)
                     startActivity(intent)
                 }
+
                 "Calculadora" -> {
                     val intent = Intent(this, CalculadoraActivity::class.java)
                     startActivity(intent)
                 }
+
                 "Em Breve" -> {
-                    // Opcional: mostrar um aviso
                 }
             }
         }

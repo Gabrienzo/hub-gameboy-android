@@ -1,3 +1,34 @@
 <resources>
-    <string name="app_name">Hub Gameboy</string>
+    <string name="app_name">Hub GameBoy</string>
+    <string name="btnBackMenu">VOLTAR AO MENU</string>
+    <!--placar-->
+    <string name="timeA">Time A</string>
+    <string name="timeB">Time B</string>
+    <string name="pontos3">+3 PONTOS</string>
+    <string name="pontos2">+2 PONTOS</string>
+    <string name="tiroLivre">TIRO LIVRE</string>
+    <string name="reiniciarPartida">REINICIAR PARTIDA</string>
+    <!--calculadora-->
+    <string name="sin">SIN</string>
+    <string name="cos">COS</string>
+    <string name="tan">TAN</string>
+    <string name="raiz">√</string>
+    <string name="erase">C</string>
+    <string name="delete">DEL</string>
+    <string name="divide">÷</string>
+    <string name="multiplicar">X</string>
+    <string name="menos">-</string>
+    <string name="mais">+</string>
+    <string name="igual">=</string>
+    <string name="ponto">.</string>
+    <string name="zero">0</string>
+    <string name="um">1</string>
+    <string name="dois">2</string>
+    <string name="tres">3</string>
+    <string name="quatro">4</string>
+    <string name="cinco">5</string>
+    <string name="seis">6</string>
+    <string name="sete">7</string>
+    <string name="oito">8</string>
+    <string name="nove">9</string>
 </resources>

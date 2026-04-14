@@ -3,11 +3,11 @@ package com.example.hub_gameboy
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.TextView
-import androidx.activity.ComponentActivity
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
-class PlacarActivity : ComponentActivity() {
+class PlacarActivity : AppCompatActivity() {
     private var pontuacaoTimeA: Int = 0
     private var pontuacaoTimeB: Int = 0
 

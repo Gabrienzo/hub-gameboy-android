@@ -7,12 +7,25 @@
     android:background="@color/gb_body"
     tools:context=".MenuActivity">
 
+    <android.widget.Button
+        android:id="@+id/btnTema"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/btn_gameboy"
+        android:fontFamily="@font/press_start_2p"
+        android:text="TEMA"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
     <LinearLayout
         android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="90dp"
         android:background="@color/gb_screen_border"
         android:padding="1dp"
         android:layout_centerHorizontal="true"
@@ -26,6 +39,21 @@
             android:background="@color/retro_background"
             android:gravity="center"
             >
+
+            <TextView
+                android:id="@+id/menu_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Hub GameBoy"
+                android:textSize="25sp"
+                android:textColor="@color/retro_accent"
+                android:fontFamily="@font/press_start_2p"
+                android:shadowColor="@color/retro_shadow"
+                android:shadowDx="7"
+                android:shadowDy="6"
+                android:shadowRadius="1"/>
 
             <TextView
                 android:id="@+id/menu_info"
@@ -67,7 +95,7 @@
                     android:background="@drawable/btn_screen"
                     android:textColor="@color/text_retro_selector"
                     android:fontFamily="@font/press_start_2p"
-                    android:textSize="25sp"
+                    android:textSize="23sp"
                     android:text="0 : 0\n\nPlacar" />
 
                 <android.widget.Button

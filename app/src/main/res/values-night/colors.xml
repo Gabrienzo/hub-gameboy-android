@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="gb_body">#1E1E1E</color>
+    <color name="gb_screen_border">#424242</color>
+    <color name="retro_background">#0F1F0F</color>
+    <color name="retro_accent">#CADC9F</color>
+    <color name="retro_shadow">#000000</color>
+    <color name="gb_contrast">#0F380F</color>
+</resources>

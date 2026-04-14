@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="90dp"
         android:background="@color/gb_screen_border"
         android:padding="1dp"
         android:layout_centerHorizontal="true"
@@ -321,7 +321,7 @@
         android:layout_margin="32dp"
         android:padding="16dp"
         android:background="@drawable/btn_gameboy"
-        android:textColor="@color/gb_contrast"
+        android:textColor="@color/white"
         android:fontFamily="@font/press_start_2p"
         android:textSize="18sp"
         android:text="VOLTAR AO MENU" />
