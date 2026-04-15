@@ -73,9 +73,9 @@ class MenuActivity : AppCompatActivity() {
 
     private fun atualizarIcone(botao: Button) {
         when (aplicativos[indexAtual]) {
-            "Placar" -> botao.text = "0 : 0\n\nPlacar"
-            "Calculadora" -> botao.text = "Calculadora"
-            "Jogo da Velha" -> botao.text = "X O X\n\nJogo da\nVelha"
+            "Placar" -> botao.text = getString(R.string.icone_placar)
+            "Calculadora" -> botao.text = getString(R.string.icone_calculadora)
+            "Jogo da Velha" -> botao.text = getString(R.string.icone_jogo_velha)
         }
     }
 }

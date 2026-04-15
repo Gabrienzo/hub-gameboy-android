@@ -16,7 +16,7 @@
         android:layout_margin="23dp"
         android:background="@drawable/btn_gameboy"
         android:fontFamily="@font/press_start_2p"
-        android:text="TEMA"
+        android:text="@string/tema"
         android:textColor="@color/white"
         android:textSize="15sp" />
 
@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="Hub GameBoy"
+                android:text="@string/app_name"
                 android:textSize="40sp"
                 android:textColor="@color/retro_accent"
                 android:fontFamily="@font/press_start_2p"
@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="Selecione a aplicação"
+                android:text="@string/selecApp"
                 android:textSize="30sp"
                 android:textColor="@color/retro_accent"
                 android:fontFamily="@font/press_start_2p"
@@ -85,7 +85,7 @@
                     android:textColor="@color/text_retro_selector"
                     android:fontFamily="@font/press_start_2p"
                     android:textSize="20sp"
-                    android:text="&lt;" />
+                    android:text="@string/lt" />
 
                 <android.widget.Button
                     android:id="@+id/icon_app_menu"
@@ -96,7 +96,7 @@
                     android:textColor="@color/text_retro_selector"
                     android:fontFamily="@font/press_start_2p"
                     android:textSize="23sp"
-                    android:text="0 : 0\n\nPlacar" />
+                    tools:text="0 : 0\n\nPlacar" />
 
                 <android.widget.Button
                     android:id="@+id/btn_seta_direita"
@@ -106,7 +106,7 @@
                     android:textColor="@color/text_retro_selector"
                     android:fontFamily="@font/press_start_2p"
                     android:textSize="20sp"
-                    android:text="&gt;" />
+                    android:text="@string/gt" />
 
             </LinearLayout>
 

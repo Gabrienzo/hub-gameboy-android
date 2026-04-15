@@ -4,12 +4,12 @@
     android:layout_height="match_parent"
     android:background="@color/gb_body"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="32dp"
         android:background="@color/gb_screen_border"
         android:padding="1dp">
 
@@ -26,7 +26,7 @@
                 android:id="@+id/tvTurno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="16dp"
                 android:fontFamily="@font/press_start_2p"
                 android:text="@string/turno_inicial"
                 android:textColor="@color/retro_accent"
@@ -132,27 +132,35 @@
         </LinearLayout>
     </LinearLayout>
 
-    <android.widget.Button
-        android:id="@+id/btnReiniciar"
-        android:layout_width="300dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/btn_gameboy"
-        android:fontFamily="@font/press_start_2p"
-        android:padding="16dp"
-        android:text="@string/reiniciarPartida"
-        android:textColor="#FFFFFF"
-        android:textSize="17sp" />
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <android.widget.Button
-        android:id="@+id/btnVoltarMenu"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_gameboy"
-        android:fontFamily="@font/press_start_2p"
-        android:padding="16dp"
-        android:text="@string/btnBackMenu"
-        android:textColor="#FFFFFF"
-        android:textSize="17sp" />
+        <android.widget.Button
+            android:id="@+id/btnReiniciar"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/btn_gameboy"
+            android:fontFamily="@font/press_start_2p"
+            android:padding="16dp"
+            android:text="@string/reiniciarPartida"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <android.widget.Button
+            android:id="@+id/btnVoltarMenu"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_gameboy"
+            android:fontFamily="@font/press_start_2p"
+            android:padding="16dp"
+            android:text="@string/btnBackMenu"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+    </LinearLayout>
 
 </LinearLayout>

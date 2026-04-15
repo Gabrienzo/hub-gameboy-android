@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Hub GameBoy</string>
+    <string name="selecApp">Selecione a aplicação:</string>
+    <string name="lt">&lt;</string>
+    <string name="gt">&gt;</string>
     <string name="btnBackMenu">VOLTAR AO MENU</string>
+    <string name="icone_placar">0 : 0\n\nPlacar</string>
+    <string name="icone_calculadora">Calculadora</string>
+    <string name="icone_jogo_velha">X O X\n\nJogo da\nVelha</string>
+    <string name="tema">tema</string>
     <!--placar-->
     <string name="timeA">Time A</string>
     <string name="timeB">Time B</string>
@@ -31,4 +38,9 @@
     <string name="sete">7</string>
     <string name="oito">8</string>
     <string name="nove">9</string>
+    <!-- Jogo da velha -->
+    <string name="venceu">VENCEU: %1$s!</string>
+    <string name="deu_velha">DEU VELHA!</string>
+    <string name="vez_do">VEZ DO: %1$s</string>
+    <string name="turno_inicial">VEZ DO: X</string>
 </resources>

@@ -42,21 +42,18 @@ class TicTacToeActivity : AppCompatActivity() {
     private fun onBotaoClicado(botao: Button) {
         if (!jogoAtivo || botao.text.isNotEmpty()) return
 
-        // Marca o botão
         botao.text = jogadorAtual
         jogadas++
 
-        // Checa se alguém ganhou ou se deu empate
         if (verificarVitoria()) {
-            tvTurno.text = "VENCEU: $jogadorAtual!"
+            tvTurno.text = getString(R.string.venceu, jogadorAtual)
             jogoAtivo = false
         } else if (jogadas == 9) {
-            tvTurno.text = "DEU VELHA!"
+            tvTurno.text = getString(R.string.deu_velha)
             jogoAtivo = false
         } else {
-            // Troca o turno
             jogadorAtual = if (jogadorAtual == "X") "O" else "X"
-            tvTurno.text = "VEZ DO: $jogadorAtual"
+            tvTurno.text = getString(R.string.vez_do, jogadorAtual)
         }
     }
 
@@ -81,7 +78,7 @@ class TicTacToeActivity : AppCompatActivity() {
         jogadorAtual = "X"
         jogoAtivo = true
         jogadas = 0
-        tvTurno.text = "VEZ DO: X"
+        tvTurno.text = getString(R.string.vez_do, jogadorAtual)
 
         for (i in 0..2) {
             for (j in 0..2) {

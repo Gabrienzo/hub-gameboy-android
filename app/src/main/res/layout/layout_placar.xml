@@ -37,7 +37,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="16dp"
-                    android:text="Time A"
+                    android:text="@string/timeA"
                     android:textSize="24sp"
                     android:textColor="@color/retro_accent"
                     android:fontFamily="@font/press_start_2p"
@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="4dp"
-                    android:text="0"
+                    tools:text="0"
                     android:textSize="80sp"
                     android:textColor="@color/retro_accent"
                     android:fontFamily="@font/press_start_2p"
@@ -70,7 +70,7 @@
                     android:textColor="@color/text_retro_selector"
                     android:fontFamily="@font/press_start_2p"
                     android:textSize="15sp"
-                    android:text="+3 PONTOS" />
+                    android:text="@string/pontos3" />
 
                 <android.widget.Button
                     android:id="@+id/doisPontosA"
@@ -81,7 +81,7 @@
                     android:textColor="@color/text_retro_selector"
                     android:fontFamily="@font/press_start_2p"
                     android:textSize="15sp"
-                    android:text="+2 PONTOS" />
+                    android:text="@string/pontos2" />
 
                 <android.widget.Button
                     android:id="@+id/tiroLivreA"
@@ -92,7 +92,7 @@
                     android:textColor="@color/text_retro_selector"
                     android:fontFamily="@font/press_start_2p"
                     android:textSize="15sp"
-                    android:text="TIRO LIVRE" />
+                    android:text="@string/tiroLivre" />
 
             </LinearLayout>
 
@@ -115,7 +115,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="16dp"
-                    android:text="Time B"
+                    android:text="@string/timeB"
                     android:textSize="24sp"
                     android:textColor="@color/retro_accent"
                     android:fontFamily="@font/press_start_2p"
@@ -130,7 +130,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="4dp"
-                    android:text="0"
+                    tools:text="0"
                     android:textSize="80sp"
                     android:textColor="@color/retro_accent"
                     android:fontFamily="@font/press_start_2p"
@@ -148,7 +148,7 @@
                     android:textColor="@color/text_retro_selector"
                     android:fontFamily="@font/press_start_2p"
                     android:textSize="15sp"
-                    android:text="+3 PONTOS" />
+                    android:text="@string/pontos3" />
 
                 <android.widget.Button
                     android:id="@+id/doisPontosB"
@@ -159,7 +159,7 @@
                     android:textColor="@color/text_retro_selector"
                     android:fontFamily="@font/press_start_2p"
                     android:textSize="15sp"
-                    android:text="+2 PONTOS" />
+                    android:text="@string/pontos2" />
 
                 <android.widget.Button
                     android:id="@+id/tiroLivreB"
@@ -170,7 +170,7 @@
                     android:textColor="@color/text_retro_selector"
                     android:fontFamily="@font/press_start_2p"
                     android:textSize="15sp"
-                    android:text="TIRO LIVRE" />
+                    android:text="@string/tiroLivre" />
             </LinearLayout>
 
         </LinearLayout>
@@ -196,7 +196,7 @@
             android:textColor="@color/white"
             android:fontFamily="@font/press_start_2p"
             android:textSize="14sp"
-            android:text="REINICIAR PARTIDA" />
+            android:text="@string/reiniciarPartida" />
 
         <android.widget.Button
             android:id="@+id/btnVoltarMenu"
@@ -207,7 +207,7 @@
             android:textColor="@color/white"
             android:fontFamily="@font/press_start_2p"
             android:textSize="14sp"
-            android:text="VOLTAR AO MENU" />
+            android:text="@string/btnBackMenu" />
 
     </LinearLayout>
 </RelativeLayout>
