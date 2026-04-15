@@ -8,7 +8,7 @@ import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 
 class MenuActivity : AppCompatActivity() {
-    private val aplicativos = listOf("Placar", "Calculadora", "Em Breve")
+    private val aplicativos = listOf("Placar", "Calculadora", "Jogo da Velha")
     private var indexAtual = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,7 +63,9 @@ class MenuActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
 
-                "Em Breve" -> {
+                "Jogo da Velha" -> {
+                    val intent = Intent(this, TicTacToeActivity::class.java)
+                    startActivity(intent)
                 }
             }
         }
@@ -73,7 +75,7 @@ class MenuActivity : AppCompatActivity() {
         when (aplicativos[indexAtual]) {
             "Placar" -> botao.text = "0 : 0\n\nPlacar"
             "Calculadora" -> botao.text = "Calculadora"
-            "Em Breve" -> botao.text = "?\n\nEm Breve"
+            "Jogo da Velha" -> botao.text = "X O X\n\nJogo da\nVelha"
         }
     }
 }

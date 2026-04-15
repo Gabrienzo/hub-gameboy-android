@@ -32,6 +32,9 @@
             android:name=".CalculadoraActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".TicTacToeActivity" />
+
     </application>
 
 </manifest>
